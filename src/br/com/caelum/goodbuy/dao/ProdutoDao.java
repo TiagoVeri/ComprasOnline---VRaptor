@@ -1,10 +1,10 @@
-package br.com.caelum.vraptor.blank.dao;
+package br.com.caelum.goodbuy.dao;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import br.com.caelum.vraptor.blank.domain.Produto;
-import br.com.caelum.vraptor.blank.infra.CriadorDeSession;
+import br.com.caelum.goodbuy.domain.Produto;
+import br.com.caelum.goodbuy.infra.CriadorDeSession;
 
 public class ProdutoDao {
 	

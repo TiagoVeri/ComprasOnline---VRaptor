@@ -1,4 +1,4 @@
-package br.com.caelum.vraptor.blank.domain;
+package br.com.caelum.goodbuy.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

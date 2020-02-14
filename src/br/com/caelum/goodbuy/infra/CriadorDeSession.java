@@ -1,4 +1,4 @@
-package br.com.caelum.vraptor.blank.infra;
+package br.com.caelum.goodbuy.infra;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
