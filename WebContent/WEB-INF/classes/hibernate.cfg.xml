@@ -8,7 +8,8 @@
       root
     </property>
     <property name="hibernate.connection.password">
-    </property>
+  admin
+        </property>
     <property name="hibernate.connection.url">
       jdbc:mysql://localhost/fj28
     </property>
@@ -23,5 +24,9 @@
     
     <property name="show_sql">true</property>
     <property name="format_sql">true</property>
+    
+    <!-- Entidades -->
+    <mapping class = "br.com.caelum.vraptor.blank.domain.Produto"/>
+    
   </session-factory>
 </hibernate-configuration>
