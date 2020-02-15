@@ -1,0 +1,3 @@
+${produto.nome}
+${produto.descricao}
+${produto.preco}

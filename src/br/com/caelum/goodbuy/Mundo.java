@@ -3,6 +3,7 @@ package br.com.caelum.goodbuy;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.caelum.goodbuy.domain.Produto;
 import br.com.caelum.vraptor.Resource;
 
 @Resource
@@ -29,4 +30,11 @@ public class Mundo {
 		Integer sum = num1 + num2;
 		return sum;
 	}
+	
+   Produto produto = new Produto(null, "Novo", "Novo produto", 35.5);
+	
+	public Produto novoProduto() {
+		return produto;
+	}
+	
 }
