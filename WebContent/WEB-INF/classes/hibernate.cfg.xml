@@ -26,7 +26,7 @@
     <property name="format_sql">true</property>
     
     <!-- Entidades -->
-    <mapping class = "br.com.caelum.vraptor.blank.domain.Produto"/>
+    <mapping class = "br.com.caelum.goodbuy.domain.Produto"/>
     
   </session-factory>
 </hibernate-configuration>

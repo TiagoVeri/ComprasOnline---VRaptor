@@ -7,12 +7,21 @@ import org.hibernate.cfg.AnnotationConfiguration;
 
 import br.com.caelum.goodbuy.dao.ProdutoDao;
 import br.com.caelum.goodbuy.domain.Produto;
+import br.com.caelum.goodbuy.infra.CriadorDeSession;
+import br.com.caelum.goodbuy.infra.CriadorDeSessionFactory;
 
 public class AlteracaoDeProduto {
 
 	public static void main(String[] args) {
 		
-		new ProdutoDao().atualizaProduto(2L);
+		SessionFactory factory = new CriadorDeSessionFactory().getInstance();
+
+		Session session = new CriadorDeSession(factory).getInstance();
+
+		ProdutoDao dao = new ProdutoDao(session);
+
+		
+		dao.atualizaProduto(2L);
 				
 
 	}
