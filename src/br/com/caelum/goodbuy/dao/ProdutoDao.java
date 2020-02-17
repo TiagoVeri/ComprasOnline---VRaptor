@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.MatchMode;
+import org.hibernate.criterion.Restrictions;
 
 import br.com.caelum.goodbuy.domain.Produto;
 import br.com.caelum.goodbuy.infra.CriadorDeSession;
@@ -72,6 +74,14 @@ public class ProdutoDao {
 		this.session.delete(produto);
 		tx.commit();
 		
+	}
+
+
+	public List<Produto> busca(String nome) {
+		return session.createCriteria(Produto.class)
+				.add(Restrictions.ilike("nome", nome, MatchMode.ANYWHERE))
+				.list();
+	
 	}
 
 }

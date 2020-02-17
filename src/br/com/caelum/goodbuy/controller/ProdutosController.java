@@ -13,6 +13,7 @@ import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.Validator;
 import br.com.caelum.vraptor.validator.Message;
 import br.com.caelum.vraptor.validator.ValidationMessage;
+import static br.com.caelum.vraptor.view.Results.*;
 
 @Resource
 public class ProdutosController {
@@ -72,4 +73,19 @@ public class ProdutosController {
 		dao.remove(produto);
 		result.redirectTo(this).lista();
 	}
+	
+	public List<Produto> busca(String nome){
+		result.include("nome", nome);
+		return dao.busca(nome);
+	}
+	
+	@Get("/produtos/busca.json")
+	public void buscaJson(String q) {
+	  result.use(json()).withoutRoot()
+	      .from(dao.busca(q))
+	    .exclude("id", "descricao")
+	    .serialize();
+	}
+	
+	
 }
